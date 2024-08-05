@@ -18,7 +18,7 @@ class CreateProfilesTable extends Migration
             $table->string('location');
             $table->string('phone');
             $table->string('email');
-            $table->json('social_links')->nullable(); // Using JSON for social links
+            $table->json('social_links')->nullable(); 
             $table->text('interests')->nullable();
             $table->timestamps();
         });

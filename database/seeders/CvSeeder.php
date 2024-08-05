@@ -88,34 +88,40 @@ class CvSeeder extends Seeder
                 'frontend' => 'Flutter',
                 'backend' => 'Laravel',
                 'details' => 'Used MVC, Passport, MySQL server, logging, and Laravel resources.'
-            ],
-            [
-                'name' => 'Book4U',
-                'description' => 'A user-friendly web application showcasing books by genre with features for search, download, and more.',
-                'frontend' => 'HTML, CSS, JavaScript',
-                'backend' => 'Laravel',
-                'details' => 'Used MVC, Passport, MySQL server, logging, and Laravel resources.'
-
             ]
+        ]);
+
+         // إدراج بيانات الاهتمامات
+         DB::table('interests')->insert([
+            ['name' => 'Learning New Technologies', 'description' => 'Learn Everything new in my field'],
+            ['name' => 'Frameworks and Technologies', 'description' => 'Laravel, Software Engineering, Backend, API..'],
+            ['name' => 'Networking', 'description' => 'Attending tech meetups'],
+            ['name' => 'Technical Writing', 'description' => 'Writing articles and guides'],
+            ['name' => 'Knowledge Sharing', 'description' => 'Sharing insights with peers'],
+            ['name' => 'Tech Discovery', 'description' => 'Exploring new technology trends']
         ]);
 
         // إدراج بيانات الملف الشخصي
         DB::table('profiles')->insert([
             [
                 'name' => 'Abeer Asidah',
-                'role' => 'Backend Developer',
+                'role' => 'Backend Developer | Software Engineer',
                 'gender' => 'Female',
-                'birthdate' => '2001-04-25', // استخدم تنسيق التاريخ الصحيح
+                'birthdate' => '2001-04-25', 
                 'nationality' => 'Syrian',
                 'location' => 'Damascus/Syria',
                 'phone' => '0997352356',
                 'email' => 'abeerasidah@gmail.com',
                 'social_links' => json_encode([
                     'facebook' => 'https://facebook.com/AbeerAsidah',
-                    'linkedin' => 'https://linkedin.com/in/AbeerAsidah',
+                    'linkedin' => 'https://www.linkedin.com/in/abeer-asidah-9719a221b/',
                     'twitter' => 'https://twitter.com/AbeerAsidah'
-                ]), // تحويل المصفوفة إلى JSON
-                'interests' => 'Learn Everything new in my field, Laravel, Software Engineering, Backend, API, Attending tech meetups, Technical writing, Knowledge Sharing, Tech Discovery'
+                ]), 
+                'interests' => 'I am a highly skilled Software Engineer and Backend
+                                Developer with a passion for crafting exceptional APIs that
+                                drive modern web and mobile applications. My expertise liesin
+                                architecting robust and scalable backend systems, particularly
+                                focused on API design and development.'
             ]
         ]);
     }
